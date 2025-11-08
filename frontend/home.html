@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home | Donation Management System</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+  <style>
+    body { background-color: #fff7f0; }
+    .hero {
+      background: url('OIP.jpg') center/cover no-repeat;
+      color: white;
+      text-align: center;
+      height: 75vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: bold;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 10px 20px;
+      border-radius: 10px;
+    }
+    .category-card img {
+      height: 180px;
+      object-fit: cover;
+      border-radius: 10px 10px 0 0;
+    }
+    .btn-login {
+      border: 2px solid #fff;
+      color: #fff;
+      background-color: transparent;
+      border-radius: 10px;
+      padding: 6px 15px;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+    .btn-login:hover {
+      background-color: #fff;
+      color: #dc3545;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-danger fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand fw-bold" href="#">🎁 Donate Now</a>
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link active" href="home.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html">Dashboard</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        <li class="nav-item"><a class="nav-link" href="profile.html">Profile</a></li>
+        <li class="nav-item"><a class="nav-link" href="feedback.html">Feedback</a></li>
+        
+
+        <li class="nav-item">
+          <button class="btn-login" data-bs-toggle="modal" data-bs-target="#loginModal">Login / Register</button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero mt-5">
+    <h1>Welcome to the Donation Management System</h1>
+    <p class="fs-5 mt-2">Your small act of kindness can change someone’s life today.</p>
+    <a href="index.html" class="btn btn-warning btn-lg fw-bold mt-3">Go to Dashboard</a>
+  </section>
+
+  <!-- Donation Categories -->
+  <section class="container py-5">
+    <h2 class="text-center mb-4 fw-bold">Donation Categories</h2>
+    <div class="row text-center">
+      <!-- Money -->
+      <div class="col-md-3 mb-4">
+        <a href="money.html" class="text-decoration-none text-dark">
+          <div class="card category-card shadow-sm">
+            <img src="money.jpg" alt="money">
+            <div class="card-body">
+              <h5>💰 Money</h5>
+              <p>Help us fund education, food, and shelter programs.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+       <!-- Food -->
+      <div class="col-md-3 mb-4">
+        <a href="food.html" class="text-decoration-none text-dark">
+          <div class="card category-card shadow-sm">
+            <img src="food.jpg" alt="Food">
+            <div class="card-body">
+              <h5>🍱 Food</h5>
+              <p>Provide meals to underprivileged children.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+      <!-- Blood -->
+      <div class="col-md-3 mb-4">
+        <a href="blood.html" class="text-decoration-none text-dark">
+          <div class="card category-card shadow-sm">
+            <img src="blood.jpg" alt="Blood">
+            <div class="card-body">
+              <h5>🩸 Blood</h5>
+              <p>Save lives by donating blood to those in medical need.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+      
+       <!-- Organs -->
+      <div class="col-md-3 mb-4">
+        <a href="organs.html" class="text-decoration-none text-dark">
+          <div class="card category-card shadow-sm">
+            <img src="organ.jpg" alt="organs">
+            <div class="card-body">
+              <h5>❤️ Organs</h5>
+              <p>Give the gift of life through organ donation.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <!-- Education -->
+      <div class="col-md-3 mb-4">
+        <a href="education.html" class="text-decoration-none text-dark">
+          <div class="card category-card shadow-sm">
+            <img src="educate.jpg" alt="education">
+            <div class="card-body">
+              <h5>🎒 Education</h5>
+              <p>Support poor children’s education with books, supplies, and scholarships.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <!-- Medicine -->
+      <div class="col-md-3 mb-4">
+        <a href="medicine.html" class="text-decoration-none text-dark">
+          <div class="card category-card shadow-sm">
+            <img src="medicine.png" alt="medicine">
+            <div class="card-body">
+              <h5>🧴 Medicine</h5>
+              <p>Provide life-saving medicines and healthcare to those who can’t afford it.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <!-- Clothes -->
+      <div class="col-md-3 mb-4">
+        <a href="clothes.html" class="text-decoration-none text-dark">
+          <div class="card category-card shadow-sm">
+            <img src="clothes.jpg" alt="clothes">
+            <div class="card-body">
+              <h5>👕 Clothes</h5>
+              <p>Donate warm clothes and essentials to the homeless and needy.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <!-- Animal Care -->
+      <div class="col-md-3 mb-4">
+        <a href="animal.html" class="text-decoration-none text-dark">
+          <div class="card category-card shadow-sm">
+            <img src="animal.jpg" alt="animal">
+            <div class="card-body">
+              <h5>🐾 Animal Care</h5>
+              <p>Help us rescue and nurture homeless animals with food, shelter, and compassion.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Login/Register Modal -->
+  <div class="modal fade" id="loginModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content p-4 rounded-4 shadow-lg">
+        <div class="modal-header border-0">
+          <h5 class="modal-title text-danger fw-bold" id="modalTitle">Login</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <!-- Login Form -->
+          <div id="loginForm">
+            <div class="mb-3">
+              <label>Email</label>
+              <input type="email" class="form-control" placeholder="Enter your email" required>
+            </div>
+            <div class="mb-3">
+              <label>Password</label>
+              <input type="password" class="form-control" placeholder="Enter your password" required>
+            </div>
+            <button class="btn btn-danger w-100">Login</button>
+            <p class="mt-3 text-center">Don’t have an account? 
+              <a href="#" class="text-danger fw-bold" onclick="showRegister()">Register here</a>
+            </p>
+          </div>
+
+          <!-- Register Form -->
+          <div id="registerForm" style="display: none;">
+            <div class="mb-3">
+              <label>Full Name</label>
+              <input type="text" class="form-control" placeholder="Enter your full name" required>
+            </div>
+            <div class="mb-3">
+              <label>Email</label>
+              <input type="email" class="form-control" placeholder="Enter your email" required>
+            </div>
+            <div class="mb-3">
+              <label>Password</label>
+              <input type="password" class="form-control" placeholder="Create a password" required>
+            </div>
+            <button class="btn btn-danger w-100">Register</button>
+            <p class="mt-3 text-center">Already have an account? 
+              <a href="#" class="text-danger fw-bold" onclick="showLogin()">Login here</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    function showRegister() {
+      document.getElementById('loginForm').style.display = 'none';
+      document.getElementById('registerForm').style.display = 'block';
+      document.getElementById('modalTitle').innerText = 'Register';
+    }
+    function showLogin() {
+      document.getElementById('registerForm').style.display = 'none';
+      document.getElementById('loginForm').style.display = 'block';
+      document.getElementById('modalTitle').innerText = 'Login';
+    }
+  </script>
+</body>
+</html>

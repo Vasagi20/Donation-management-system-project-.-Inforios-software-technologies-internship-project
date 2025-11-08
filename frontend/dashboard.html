@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard | Online Food Menu System</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body { background: #fff5f5; padding-top: 70px; }
+    header { text-align: center; margin-bottom: 20px; }
+    table { background: white; border-radius: 10px; overflow: hidden; }
+    
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-danger fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand fw-bold" href="#">🎁 Donate Now</a>
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link active" href="home.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html">Dashboard</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        <li class="nav-item"><a class="nav-link" href="profile.html">Profile</a></li>
+        <li class="nav-item">
+          <button class="btn-login" data-bs-toggle="modal" data-bs-target="#loginModal">Login / Register</button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-danger fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand fw-bold" href="#">🍴 Donation Dashboard</a>
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+      </ul>
+    </div>
+  </nav>
+
+
+
+  
+  
+  <section class="container">
+    <header>
+      <h1> 👁️ Donation Management System</h1>
+      <p>Manage all food items here</p>
+    </header>
+
+    <div class="form-container mb-4 d-flex flex-wrap gap-2">
+      <input type="text" id="name" class="form-control w-auto" placeholder="Food Name" required>
+      <input type="number" id="price" class="form-control w-auto" placeholder="Price" required>
+      <input type="text" id="category" class="form-control w-auto" placeholder="Category" required>
+      <input type="text" id="description" class="form-control w-auto" placeholder="Description">
+      <select id="availability" class="form-select w-auto">
+        <option value="Available">Available</option>
+        <option value="Unavailable">Unavailable</option>
+      </select>
+      <button class="btn btn-success" onclick="addFood()">Add Food</button>
+    </div>
+
+    <table class="table table-bordered text-center">
+      <thead class="table-danger">
+        <tr>
+          <th>ID</th>
+          <th>Food Name</th>
+          <th>Price</th>
+          <th>Category</th>
+          <th>Description</th>
+          <th>Availability</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="foodList"></tbody>
+    </table>
+  </section>
+
+  <footer class="text-center text-light py-3 bg-dark">
+    <p class="mb-0"> ❤️ Developed by Vasagi  | Donation management System</p>
+  </footer>
+
+  <script>
+    let id = 1;
+    function addFood() {
+      const name = document.getElementById("name").value;
+      const price = document.getElementById("price").value;
+      const category = document.getElementById("category").value;
+      const description = document.getElementById("description").value;
+      const availability = document.getElementById("availability").value;
+
+      if (!name || !price || !category) {
+        alert("Please fill all required fields!");
+        return;
+      }
+
+      const foodList = document.getElementById("foodList");
+      const row = `<tr>
+        <td>${id++}</td>
+        <td>${name}</td>
+        <td>₹${price}</td>
+        <td>${category}</td>
+        <td>${description || "N/A"}</td>
+        <td>${availability}</td>
+        <td>
+          <button class='btn btn-warning btn-sm' onclick='editFood(this)'>Edit</button>
+          <button class='btn btn-danger btn-sm' onclick='deleteFood(this)'>Delete</button>
+        </td>
+      </tr>`;
+      foodList.innerHTML += row;
+
+      document.getElementById("name").value = '';
+      document.getElementById("price").value = '';
+      document.getElementById("category").value = '';
+      document.getElementById("description").value = '';
+      document.getElementById("availability").value = 'Available';
+    }
+
+    function deleteFood(btn) {
+      btn.closest('tr').remove();
+    }
+
+    function editFood(btn) {
+      const row = btn.closest('tr');
+      const cells = row.querySelectorAll('td');
+      const newName = prompt("Enter new name:", cells[1].innerText);
+      const newPrice = prompt("Enter new price:", cells[2].innerText.replace('₹', ''));
+      if (newName && newPrice) {
+        cells[1].innerText = newName;
+        cells[2].innerText = "₹" + newPrice;
+      }
+    }
+  </script>
+</body>
+</html>

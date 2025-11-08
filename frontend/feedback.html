@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feedback | Donation Management System</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #fff8f8;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    /* Navbar */
+    .navbar {
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Hero Section */
+    .hero-section {
+      background: linear-gradient(green),
+                  url('https://images.unsplash.com/photo-1509099836639-18ba1795216d?w=1200') center/cover no-repeat;
+      color: white;
+      text-align: center;
+      padding: 120px 20px;
+    }
+
+    .hero-section h1 {
+      font-size: 3rem;
+      font-weight: 700;
+    }
+
+    /* Feedback Form */
+    .feedback-card {
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+      padding: 40px;
+      transition: all 0.3s ease;
+    }
+
+    .feedback-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(220, 53, 69, 0.2);
+    }
+
+    .form-control, .form-select {
+      border-radius: 10px;
+    }
+
+    button {
+      border-radius: 25px;
+      padding: 10px 30px;
+      font-size: 1.1rem;
+      font-weight: 500;
+    }
+
+    /* Success Message */
+    #successMessage {
+      background-color: orange;
+      border: 1px solid #c3e6cb;
+      color: #155724;
+      border-radius: 10px;
+      padding: 15px;
+      font-weight: 500;
+      animation: fadeIn 0.8s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Footer */
+    footer {
+      background-color: #dc3545;
+      color: white;
+      padding: 15px 0;
+    }
+
+    footer a {
+      color: #fff;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-danger fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand fw-bold" href="home.html">🎁 Donation System</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html">Dashboard</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link active" href="feedback.html">Feedback</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-danger fixed-top">
+    <div class="container-fluid">
+      
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link active" href="home.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html">Dashboard</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        <li class="nav-item"><a class="nav-link" href="profile.html">Profile</a></li>
+        <li class="nav-item"><a class="nav-link" href="feedback.html">Feedback</a></li>
+
+        
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero-section mt-5">
+    <h1>We Value Your Kind Words ❤️</h1>
+    <p class="mt-3 fs-5">Your feedback helps us make a bigger impact!</p>
+  </section>
+
+  <!-- Feedback Form -->
+  <section class="container py-5">
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <div class="feedback-card">
+          <h3 class="text-center text-danger fw-bold mb-4">Share Your Thoughts</h3>
+          <form id="feedbackForm">
+            <div class="mb-3">
+              <label for="name" class="form-label fw-semibold">Full Name</label>
+              <input type="text" id="name" class="form-control" placeholder="Enter your full name" required>
+            </div>
+
+            <div class="mb-3">
+              <label for="email" class="form-label fw-semibold">Email Address</label>
+              <input type="email" id="email" class="form-control" placeholder="Enter your email" required>
+            </div>
+
+            <div class="mb-3">
+              <label for="rating" class="form-label fw-semibold">Rate Our Donation Services</label>
+              <select id="rating" class="form-select" required>
+                <option value="">Choose your rating</option>
+                <option>🌟🌟🌟🌟🌟 Excellent</option>
+                <option>🌟🌟🌟🌟 Good</option>
+                <option>🌟🌟🌟 Average</option>
+                <option>🌟🌟 Poor</option>
+                <option>🌟 Very Poor</option>
+              </select>
+            </div>
+
+            <div class="mb-3">
+              <label for="message" class="form-label fw-semibold">Your Feedback</label>
+              <textarea id="message" class="form-control" rows="4" placeholder="Share your feedback..." required></textarea>
+            </div>
+
+            <div class="text-center">
+              <button type="submit" class="btn btn-danger btn-lg">Submit Feedback</button>
+            </div>
+          </form>
+
+          <div id="successMessage" class="mt-4 text-center d-none">
+            ✅ Thank you for your feedback! Your voice makes us better every day.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center">
+    <p class="mb-0">&copy; 2025 Donation Management System | 
+      <a href="home.html">Back to Home</a>
+    </p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.getElementById("feedbackForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+      this.reset();
+      const msg = document.getElementById("successMessage");
+      msg.classList.remove("d-none");
+      msg.scrollIntoView({ behavior: 'smooth' });
+    });
+  </script>
+</body>
+</html>

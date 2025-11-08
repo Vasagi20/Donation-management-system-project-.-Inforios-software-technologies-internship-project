@@ -28,6 +28,7 @@ The system is designed to streamline the process of managing donations and donor
 🗄️ PostgreSQL Database – Securely stores and manages data.
 
 🧱 Tech Stack
+
 Component	Technology
 Frontend	HTML, CSS, JavaScript
 Backend	FastAPI (Python)
@@ -71,7 +72,7 @@ Delete	Remove outdated or incorrect data
 
 Organization: Inforios Software Technologies, Thanjavur
 
-Role: Web Developer Intern
+Role: Foundation of Python Intern
 
 Project Title: Donation Management System 
 

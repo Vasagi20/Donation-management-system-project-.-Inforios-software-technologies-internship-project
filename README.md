@@ -92,10 +92,6 @@ Duration: [13.10.2025 to 30.10.2025]
 
 Technologies Used: FastAPI, Python, PostgreSQL, HTML, CSS, JavaScript
 
-📸 Screenshots
-
-
-
 
 🏁 Conclusion
 

@@ -1,58 +1,46 @@
-🩵 Donation Management System (DMS)
+Donation Management System 
+
 📍 Internship Project – Inforios Software Technologies, Thanjavur
+
 📘 Project Overview
 
-The Donation Management System (DMS) is a web-based application developed during my internship at Inforios Software Technologies, Thanjavur.
-The project is built using FastAPI, Python, PostgreSQL, and follows the CRS (Client–Repository–Service) architecture.
+The Donation Management System  is a web-based application developed during my internship at Inforios Software Technologies, Thanjavur.
+It is built using FastAPI, Python, PostgreSQL, and follows the CRS (Client–Repository–Service) architecture.
 
-This system helps organizations manage donations efficiently by allowing users to register, donate, and interact through a secure, user-friendly interface. It also provides an admin panel for managing donors, feedback, and donation records.
+The system is designed to streamline the process of managing donations and donors by providing a secure, easy-to-use platform. It enables users to register, donate, send feedback, and view their profiles, while administrators can manage all records efficiently.
 
 🚀 Features
 
-🔐 User Authentication – Login & registration with validation.
+🔐 User Authentication – Secure login and registration system.
 
-🏠 Home Page – Displays donation activities and organization info.
+🏠 Home Page – Displays donation activities and organization details.
 
-📊 Dashboard – Admin and user dashboard for managing data.
+📊 Dashboard – Provides a summary of donations and users.
 
-👤 Profile Page – View and edit user information.
+👤 Profile Page – Allows users to view and edit personal details.
 
-💬 Feedback Section – Submit and manage donor feedback.
+💬 Feedback Section – Collects and manages user feedback.
 
-📨 Contact Us – Send messages or queries to the organization.
+📨 Contact Us Page – Enables users to send messages to the organization.
 
-🧩 CRUD Operations – Create, Read, Update, and Delete functionalities for donations, feedback, and users.
+🧩 CRUD Operations – Perform Create, Read, Update, and Delete functions for donors, feedback, and donations.
 
-🗄️ PostgreSQL Database – Stores all user and donation data securely.
+🗄️ PostgreSQL Database – Securely stores and manages data.
 
 🧱 Tech Stack
-Component	Technology Used
+Component	Technology
 Frontend	HTML, CSS, JavaScript
 Backend	FastAPI (Python)
 Architecture	CRS (Client–Repository–Service)
 Database	PostgreSQL
 Server	Uvicorn
-🗂️ Project Structure
-donation-management-system/
-│
-├── app/
-│   ├── main.py              # Application entry point
-│   ├── models/              # Database models
-│   ├── schemas/             # Pydantic schemas
-│   ├── services/            # Business logic
-│   ├── repository/          # Database queries
-│   ├── routes/              # API routes
-│   └── templates/ & static/ # HTML, CSS, JS files
-│
-├── requirements.txt         # Dependencies
-└── README.md                # Project documentation
 
 ⚙️ Installation & Setup
 1️⃣ Clone the repository
 git clone https://github.com/your-username/donation-management-system.git
 cd donation-management-system
 
-2️⃣ Create and activate virtual environment
+2️⃣ Create and activate a virtual environment
 python -m venv venv
 venv\Scripts\activate     # For Windows
 # OR
@@ -63,7 +51,7 @@ pip install -r requirements.txt
 
 4️⃣ Configure PostgreSQL connection
 
-In app/database/config.py, set your connection string:
+Update your database connection string in the configuration file:
 
 DATABASE_URL = "postgresql://username:password@localhost:5432/donation_db"
 
@@ -71,34 +59,32 @@ DATABASE_URL = "postgresql://username:password@localhost:5432/donation_db"
 uvicorn app.main:app --reload
 
 
-Visit http://127.0.0.1:8000
- to view the app.
+Open your browser and visit http://127.0.0.1:8000
 
 🧩 CRUD Operations
 Operation	Description
-Create	Add new donors or donation records
+Create	Add new donors or donation details
 Read	View all donations and feedback
-Update	Modify donation details or user profiles
-Delete	Remove records or feedback
+Update	Modify existing user or donation records
+Delete	Remove outdated or incorrect data
 👨‍💻 Internship Details
 
 Organization: Inforios Software Technologies, Thanjavur
 
-Role: Intern (Web Developer)
+Role: Web Developer Intern
 
-Project Title: Donation Management System (DMS)
+Project Title: Donation Management System 
 
 Duration: [13.10.2025 to 30.10.2025]
 
 Technologies Used: FastAPI, Python, PostgreSQL, HTML, CSS, JavaScript
 
-
 🏁 Conclusion
 
-This project enhanced my practical understanding of web development, API design, and database integration using FastAPI and PostgreSQL.
-It was a valuable internship experience where I learned how to build scalable, real-world web applications with CRUD functionalities and clean architecture.
+This internship project helped me gain hands-on experience in FastAPI, backend development, and database integration.
+It improved my understanding of CRUD operations, user authentication, and structured web application design using the CRS architecture.
 
 🧾 License
 
-This project is developed for academic and learning purposes during my internship.
+This project was created as part of my internship at Inforios Software Technologies for academic and learning purposes.
 You may use or modify it with proper credit.
